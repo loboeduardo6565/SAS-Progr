@@ -9,9 +9,9 @@ data alumnos;
 	length nombre $32 edad 8 pais $32 modulo 8;
 	input nombre $ edad pais $ modulo;
 	datalines;
-Eduardo 35 Venezuela 2
-Carla 33 Venezuela 2
-Carlota 3 Venezuela 0 
+Mario 35 Venezuela 2
+María 33 Venezuela 2
+Camila 3 Venezuela 0 
 Carlos 35 Argentina 0
 Fernanda 32 Argentina 0
 Andreina 31 Argentina 0
