@@ -1,0 +1,34 @@
+###### Triangulo 1 
+```
+DATA _3ANGULO;
+	LENGTH A 8 B 8 C 8;
+	INPUT A B C;
+	DATALINES;
+1.32  5.81  1.32
+2.86  2.86  2.86
+3.45  1.23  2.89
+1.23  1.23  1.52
+5.32  2.37  6.02
+7.43  8.12  8.12
+5.76  5.76  5.76
+3.89  7.82  2.87
+1.29  6.21  6.21
+2.98  1.69  3.45
+7.98  2.46  2.46
+;
+RUN;
+
+DATA TIPO;
+	SET _3ANGULO;
+	LENGTH TRIANGULO $32;
+
+	IF ((A+B)<C) OR ((A+C)<B) OR ((B+C)<A) THEN
+		TRIANGULO='No es un Triangulo';
+	ELSE IF (A=B) AND (A=C) AND (B=C) THEN
+		TRIANGULO='Equilatero';
+	ELSE IF (A=B) OR (A=C) OR (B=C) THEN
+		TRIANGULO='Isosceles';
+	ELSE IF NOT(A=B) AND NOT(A=C) AND NOT(B=C) THEN
+		TRIANGULO='Escaleno';
+RUN;
+```
