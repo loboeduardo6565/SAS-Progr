@@ -3,10 +3,10 @@
 ##### Creando una librería desde un archivo de excel 
 ```
 option validvarname=v7; /*Obliga a que los nombres de tablas y columnas leídas de excel cumplan con las convenciones de nomenclatura SAS*/
-libname NP xlsx "/home/u49736606/EPG194/data/np_info.xlsx"; /*Se debe indicar el Engine*/
+libname NAME xlsx "/home/u49736606/Ruta/File.xlsx"; /*Se debe indicar el Engine*/
 
-proc contents data=NP.PARKS;
+proc contents data=NAME.LIBRO;
 run;
 
-libname np clear; /*Se elimina como buena práctica el libref*/
+libname NAME clear; /*Se elimina como buena práctica el libref*/
 ```
